@@ -25,7 +25,8 @@ server:
 security:
   user:
     password: password
-  enable-csrf: false
+  enable-csrf: true
+  ignored: /resources/**
 spring:
   profiles: docker
   datasource:
@@ -33,7 +34,6 @@ spring:
     username: root
     password: dbpass
     initialize: true
-security.ignored: /resources/**
 eureka:
   instance:
     prefer-ip-address: true

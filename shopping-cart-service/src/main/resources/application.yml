@@ -64,7 +64,7 @@ eureka:
       defaultZone: http://discovery-service:8761/eureka/
 ---
 spring:
-  application:
+  application:uth2ClientAuthenticationProcessingFilter
     name: account-service
   profiles: test
   jpa:
