@@ -22,10 +22,13 @@ security.ignored: /resources/**
 server:
   port: 8181
   contextPath: /uaa
+  session:
+    cookie:
+      name: user-service
 security:
   user:
     password: password
-  enable-csrf: true
+  enable-csrf: false
   ignored: /resources/**
 spring:
   profiles: docker

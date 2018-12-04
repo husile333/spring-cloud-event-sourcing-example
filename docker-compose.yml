@@ -37,6 +37,7 @@ user-service:
   image: kbastani/user-service
   ports:
    - 8181:8181
+   - 15005:5005
   links:
    - mysql
    - discovery-service
@@ -115,6 +116,7 @@ online-store-web:
   image: kbastani/online-store-web
   ports:
    - 8787:8787
+   - 15006:5005
   links:
    - discovery-service
    - config-service

@@ -50,7 +50,7 @@ zuul:
       path: /user/**
       url: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user
 security:
-  enable-csrf: true
+  enable-csrf: false
   oauth2:
     resource:
       userInfoUri: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user
@@ -59,6 +59,10 @@ security:
       userAuthorizationUri: http://${DOCKER_IP:192.168.99.100}:8181/uaa/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
+server:
+   session:
+      cookie:
+        name: online-web
 eureka:
   instance:
     non-secure-port: 8787
