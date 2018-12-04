@@ -50,7 +50,7 @@ zuul:
       path: /user/**
       url: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user
 security:
-  enable-csrf: false
+  enable-csrf: true
   oauth2:
     resource:
       userInfoUri: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user

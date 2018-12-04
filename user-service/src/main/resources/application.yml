@@ -28,7 +28,7 @@ server:
 security:
   user:
     password: password
-  enable-csrf: false
+  enable-csrf: true
   ignored: /resources/**
 spring:
   profiles: docker
